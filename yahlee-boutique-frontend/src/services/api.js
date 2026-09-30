@@ -3,7 +3,14 @@
  * Central client for all backend API calls (FastAPI at /api/v1)
  */
 
-const BASE_URL = '/api/v1';
+/**
+ * In development: Vite proxies /api → http://127.0.0.1:8000 (see vite.config.js)
+ * In production (Vercel): set VITE_API_BASE_URL=https://your-render-app.onrender.com
+ *   so API calls go directly to the Render backend.
+ */
+const BASE_URL = import.meta.env.VITE_API_BASE_URL
+  ? `${import.meta.env.VITE_API_BASE_URL}/api/v1`
+  : '/api/v1';
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
 

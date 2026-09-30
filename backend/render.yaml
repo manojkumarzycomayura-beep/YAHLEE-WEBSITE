@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: yahlee-boutique-api
+    runtime: python
+    rootDir: .
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PROJECT_NAME
+        value: Yahlee Boutique API
+      - key: VERSION
+        value: "1.0.0"
+      - key: API_V1_STR
+        value: /api/v1
+      - key: SECRET_KEY
+        generateValue: true          # Render auto-generates a secure random value
+      - key: ALGORITHM
+        value: HS256
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: "1440"
+      - key: DATABASE_URL
+        value: sqlite:///./yahlee_boutique.db
+      - key: BACKEND_CORS_ORIGINS
+        value: '["https://yahlee-boutique.vercel.app","https://www.yahleeboutique.com"]'
+    healthCheckPath: /health
