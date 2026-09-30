@@ -1,0 +1,37 @@
+/* AnnouncementBar.css */
+.announcement-bar {
+  background: var(--brown-dark, #2e1c15);
+  color: var(--white, #ffffff);
+  padding: 9px 15px;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1001;
+}
+
+.announcement-bar p {
+  margin: 0;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.announcement-bar a {
+  color: var(--gold-light, #d1b273);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.announcement-bar a:hover {
+  color: var(--white, #ffffff);
+}

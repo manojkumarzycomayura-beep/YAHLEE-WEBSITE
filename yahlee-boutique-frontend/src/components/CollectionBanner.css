@@ -1,0 +1,56 @@
+/* CollectionBanner.css */
+.collection-banner {
+  position: relative;
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  border-radius: var(--radius-md, 10px);
+  margin: 20px 0;
+}
+
+.collection-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(46, 28, 21, 0.48);
+  z-index: 1;
+}
+
+.collection-content {
+  position: relative;
+  z-index: 2;
+  width: min(620px, 90%);
+  margin: auto;
+  text-align: center;
+  color: var(--white, #ffffff);
+  padding: 40px 20px;
+}
+
+.collection-content h2 {
+  color: var(--white, #ffffff);
+  margin-bottom: 15px;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.collection-content p {
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 28px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .collection-banner {
+    min-height: 360px;
+    border-radius: 0;
+  }
+
+  .collection-content p {
+    font-size: 14px;
+  }
+}

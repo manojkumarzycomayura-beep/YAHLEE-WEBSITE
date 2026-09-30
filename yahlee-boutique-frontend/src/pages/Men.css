@@ -1,0 +1,400 @@
+/* Men.css */
+/* =========================================================
+   YAHLEE MEN - Timeless Indian Elegance
+   ========================================================= */
+
+.men-page {
+  background: var(--cream-light, #fdfaf5);
+  overflow-x: hidden;
+}
+
+/* ===== HERO ===== */
+.men-hero {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.men-hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.men-hero:hover .men-hero-image {
+  transform: scale(1.02);
+}
+
+.men-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(46, 28, 21, 0.72) 0%,
+    rgba(46, 28, 21, 0.35) 100%
+  );
+  z-index: 1;
+}
+
+.men-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--white, #ffffff);
+  padding: 40px 20px;
+  max-width: 720px;
+}
+
+.men-eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-light, #d1b273);
+  margin-bottom: 15px;
+}
+
+.men-hero-content h1 {
+  color: var(--white, #ffffff);
+  margin-bottom: 18px;
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  line-height: 1.15;
+}
+
+.men-hero-content h1 span {
+  color: var(--gold-light, #d1b273);
+}
+
+.men-hero-content p {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 16px;
+  max-width: 550px;
+  margin: 0 auto 28px;
+  line-height: 1.6;
+}
+
+.men-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 34px;
+  background: var(--gold, #b08a45);
+  color: var(--white, #ffffff);
+  border: none;
+  border-radius: var(--radius-sm, 5px);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: var(--transition, all 0.3s ease);
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(176, 138, 69, 0.3);
+}
+
+.men-primary-btn:hover {
+  background: var(--gold-dark, #8a6830);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(176, 138, 69, 0.4);
+}
+
+/* ===== INTRO ===== */
+.men-intro {
+  text-align: center;
+  padding: 85px 20px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.men-intro h2 {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: var(--brown-dark, #2e1c15);
+  margin-bottom: 18px;
+  line-height: 1.25;
+}
+
+.men-intro h2 span {
+  color: var(--gold-dark, #8a6830);
+}
+
+.men-intro p {
+  color: var(--text-light, #76675f);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ===== CATEGORY NAV ===== */
+.men-category-section {
+  padding: 12px 20px;
+  background: var(--white, #ffffff);
+  border-top: 1px solid var(--border, #e3d8ca);
+  border-bottom: 1px solid var(--border, #e3d8ca);
+  position: sticky;
+  top: 75px;
+  z-index: 900;
+  backdrop-filter: blur(8px);
+}
+
+.men-category-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.men-category-btn {
+  padding: 9px 22px;
+  border: 1px solid var(--border, #e3d8ca);
+  background: var(--white, #ffffff);
+  color: var(--brown, #4a2f24);
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition, all 0.25s ease);
+  white-space: nowrap;
+}
+
+.men-category-btn:hover,
+.men-category-btn.active {
+  background: var(--brown, #4a2f24);
+  border-color: var(--brown, #4a2f24);
+  color: var(--white, #ffffff);
+}
+
+/* ===== PRODUCTS SECTION ===== */
+.men-products-section {
+  padding: 55px 20px 85px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.men-products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.men-products-header h2 {
+  font-size: 2rem;
+  color: var(--brown-dark, #2e1c15);
+}
+
+.men-products-header h2 span {
+  color: var(--gold-dark, #8a6830);
+}
+
+.men-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* ===== PRODUCT GRID ===== */
+.men-product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.men-product-card {
+  position: relative;
+  background: var(--white, #ffffff);
+  border: 1px solid var(--border, #e3d8ca);
+  border-radius: var(--radius-md, 10px);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.men-product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md, 0 8px 25px rgba(74, 47, 36, 0.12));
+}
+
+.men-product-image-wrapper {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--cream, #f8f3eb);
+}
+
+.men-product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.men-product-card:hover .men-product-image {
+  transform: scale(1.05);
+}
+
+.men-product-info {
+  padding: 16px 18px 20px;
+}
+
+/* ===== FEATURE BANNER ===== */
+.men-feature-banner {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  margin: 30px 0;
+}
+
+.men-feature-banner img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.men-feature-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(46, 28, 21, 0.55);
+}
+
+.men-feature-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--white, #ffffff);
+  padding: 40px 20px;
+  max-width: 620px;
+}
+
+.men-feature-content span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-light, #d1b273);
+}
+
+.men-feature-content h2 {
+  color: var(--white, #ffffff);
+  margin: 15px 0;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+}
+
+.men-feature-content p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 25px;
+}
+
+.men-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 34px;
+  background: var(--white, #ffffff);
+  color: var(--brown, #4a2f24);
+  border: none;
+  border-radius: var(--radius-sm, 5px);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition, all 0.3s ease);
+}
+
+.men-secondary-btn:hover {
+  background: var(--cream, #f8f3eb);
+}
+
+/* ===== OCCASION SECTION ===== */
+.men-occasion-section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.men-section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.men-section-heading h2 {
+  font-size: 2rem;
+  color: var(--brown-dark, #2e1c15);
+}
+
+.men-section-heading h2 span {
+  color: var(--gold-dark, #8a6830);
+}
+
+.men-occasion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ===== BENEFITS ===== */
+.men-benefits {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 60px 25px;
+  max-width: 1200px;
+  margin: 20px auto 60px;
+  background: var(--cream, #f8f3eb);
+  border-radius: var(--radius-lg, 16px);
+  border: 1px solid var(--border, #e3d8ca);
+}
+
+@media (max-width: 1000px) {
+  .men-product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .men-occasion-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .men-benefits {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .men-hero {
+    min-height: 440px;
+  }
+
+  .men-product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .men-products-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .men-occasion-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .men-benefits {
+    grid-template-columns: 1fr 1fr;
+    padding: 30px 15px;
+  }
+}
